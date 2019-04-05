@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.otaliastudios.zoom.ZoomLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/zoom_layout"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:scrollbars="horizontal|vertical"
+    app:hasClickableChildren="true"
+    app:horizontalPanEnabled="true"
+    app:minZoom="1"
+    app:verticalPanEnabled="true"
+    app:zoomEnabled="true">
+
+    <com.otaliastudios.zoom.demo.ColorGridView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</com.otaliastudios.zoom.ZoomLayout>

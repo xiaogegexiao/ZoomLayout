@@ -1,6 +1,7 @@
 package com.otaliastudios.zoom.demo;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         final Button buttonZoomLayout = findViewById(R.id.show_zl);
         final Button buttonZoomImage = findViewById(R.id.show_ziv);
         final Button buttonZoomSurface = findViewById(R.id.show_zsv);
+        final Button buttonList = findViewById(R.id.show_list);
         final ZoomLayout zoomLayout = findViewById(R.id.zoom_layout);
         final ZoomImageView zoomImage = findViewById(R.id.zoom_image);
         final View zoomSurface = findViewById(R.id.zoom_surface);
@@ -89,6 +91,13 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,
                             "ZoomSurfaceView requires API 18", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+        buttonList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListActivity.class);
+                startActivity(intent);
             }
         });
         buttonZoomLayout.performClick();
